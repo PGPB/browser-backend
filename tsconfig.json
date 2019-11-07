@@ -8,13 +8,12 @@
         "lib": [
             "esnext"
         ],
+
+        // at the moment i didn't find a
+        // way to set up it correctly.
         "baseUrl": "./",
-        "paths": {
-            // @types conflicts with `node_modules/@types`.
-            "@type/*": ["src/@types/*"],
-            "@routes/*": ["src/routes/*"],
-            "@controllers/*": ["src/controllers/*"]
-        },
+        "paths": {},
+
         "sourceMap": true,
         "alwaysStrict": true,
         "strictNullChecks": true,
