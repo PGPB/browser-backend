@@ -34,6 +34,14 @@ app.use(morgan(
 ));
 
 
+/* Routes. */
+
+import errorRouter from "./routes/error";
+
+// 404, keep this as the last route.
+app.use("*", errorRouter);
+
+
 /* Express app. */
 
 export default app;
