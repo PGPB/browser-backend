@@ -1,12 +1,17 @@
 import app from "./app";
 
 
-app.set("port", process.env.PORT || "4444");
+const port = process.env.PORT || "8080";
 
-const server = app.listen(app.get("port"), () => {
+app.set("port", port);
+
+const server = app.listen(port, () => {
     const tab = "  ";
+    const env = app.get("env");
+
     console.log(
-        `${tab}App is running at http://localhost:${app.get("port")} in ${app.get("env")} mode.\n` +
+        `\n` +
+        `${tab}App is running at http://localhost:${port} in ${env} mode.\n` +
         `${tab}Press CTRL-C to stop.\n`
     );
 });
