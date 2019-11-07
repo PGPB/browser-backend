@@ -8,10 +8,11 @@
         "lib": [
             "esnext"
         ],
-
         "baseUrl": "./",
-        "paths": {},
-
+        "paths": {
+            // @types conflicts with `node_modules/@types`.
+            "@type/*": ["src/@types/*"]
+        },
         "sourceMap": true,
         "alwaysStrict": true,
         "strictNullChecks": true,
@@ -24,8 +25,8 @@
         // "noUnusedParameters": true,
         "removeComments": true,
         "typeRoots": [
-            "./node_modules/@types",
-            "./src/@types"
+            "node_modules/@types",
+            "src/@types"
         ]
     }
 }
