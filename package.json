@@ -5,7 +5,7 @@
     "scripts": {
         "start": "cross-env NODE_ENV=production node dist/server",
         "build": "tsc",
-        "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"yarn watch-ts\" \"yarn watch-server\"",
+        "watch": "concurrently -k -p \"[{name}]\" -n \"TSC,Node\" -c \"cyan.bold,green.bold\" \"yarn watch-ts\" \"yarn watch-server\"",
         "watch-ts": "tsc --watch",
         "watch-server": "cross-env NODE_ENV=development nodemon dist/server"
     },
