@@ -1,8 +1,6 @@
 # Folders.
 node_modules
 dist
-.awcache
-.cache
 
 # Files.
 *.log

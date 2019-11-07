@@ -3,8 +3,6 @@
     "files.exclude": {
         // folders.
         "node_modules": true,
-        ".awcache": true,
-        ".cache": true,
         "dist": true,
 
         // IDE's and editor's folders.

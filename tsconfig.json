@@ -27,11 +27,5 @@
             "./node_modules/@types",
             "./src/@types"
         ]
-    },
-    "awesomeTypescriptLoaderOptions": {
-        "useCache": true,
-        "useTranspileModule": true,
-        // for debugging purpose.
-        // "errorsAsWarnings": true
     }
 }
