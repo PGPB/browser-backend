@@ -10,7 +10,8 @@ const server = app.listen(port, () => {
     const env = app.get("env");
 
     console.log(
-        `\n` +
+        // tslint:disable-next-line:prefer-template
+        "\n" +
         `${tab}App is running at http://localhost:${port} in ${env} mode.\n` +
         `${tab}Press CTRL-C to stop.\n`
     );
