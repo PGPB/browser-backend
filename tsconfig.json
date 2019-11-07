@@ -23,7 +23,7 @@
         "noFallthroughCasesInSwitch": true,
         "noImplicitThis": true,
         "noUnusedLocals": true,
-        // "noUnusedParameters": true,
+        "noUnusedParameters": true,
         "removeComments": true,
         "typeRoots": [
             "node_modules/@types",
