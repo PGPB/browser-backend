@@ -11,7 +11,9 @@
         "baseUrl": "./",
         "paths": {
             // @types conflicts with `node_modules/@types`.
-            "@type/*": ["src/@types/*"]
+            "@type/*": ["src/@types/*"],
+            "@routes/*": ["src/routes/*"],
+            "@controllers/*": ["src/controllers/*"]
         },
         "sourceMap": true,
         "alwaysStrict": true,
