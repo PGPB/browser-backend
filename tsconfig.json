@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "lib": [
+            "esnext"
+        ],
+
+        // at the moment i didn't find a
+        // way to set up it correctly.
+        "baseUrl": "./",
+        "paths": {},
+
+        "sourceMap": true,
+        "alwaysStrict": true,
+        "strictNullChecks": true,
+        "disableSizeLimit": true,
+        "downlevelIteration": true,
+        "noErrorTruncation": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "removeComments": true,
+        "typeRoots": [
+            "./node_modules/@types",
+            "./src/@types"
+        ]
+    },
+    "exclude": [
+        "./src-frontend"
+    ]
+}
