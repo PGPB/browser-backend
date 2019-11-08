@@ -3,8 +3,8 @@
         "target": "ESNext",
         "module": "CommonJS",
         "moduleResolution": "node",
-        "rootDir": "src",
-        "outDir": "dist",
+        "rootDir": "./src",
+        "outDir": "./dist",
         "lib": [
             "esnext"
         ],
@@ -26,8 +26,11 @@
         "noUnusedParameters": true,
         "removeComments": true,
         "typeRoots": [
-            "node_modules/@types",
-            "src/@types"
+            "./node_modules/@types",
+            "./src/@types"
         ]
-    }
+    },
+    "exclude": [
+        "./src-frontend"
+    ]
 }

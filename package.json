@@ -4,11 +4,15 @@
     "description": "",
     "scripts": {
         "start": "cross-env NODE_ENV=production node dist/server",
-        "build": "tsc",
+        "build": "yarn build-server && yarn build-frontend",
         "watch": "concurrently -k -p \"[{name}]\" -n \"TSC,Node\" -c \"cyan.bold,green.bold\" \"yarn watch-ts\" \"yarn watch-server\"",
+        "build-server": "tsc",
+        "build-frontend": "yarn frontend-download && yarn frontend-build && yarn frontend-copy",
         "watch-ts": "tsc --watch",
         "watch-server": "cross-env NODE_ENV=development nodemon dist/server",
-        "tslint": "tslint -c tslint.json -p tsconfig.json"
+        "frontend-download": "git submodule update --remote --merge",
+        "frontend-build": "cd ./src-frontend && yarn --cwd . && yarn --cwd . build",
+        "frontend-copy": "copyfiles --up 2 ./src-frontend/dist/* ./dist"
     },
     "homepage": "https://github.com/PGPB/browser-backend/README.md",
     "repository": {
@@ -31,6 +35,7 @@
         "axios": "^0.19.0",
         "body-parser": "^1.19.0",
         "compression": "^1.7.4",
+        "copyfiles": "^2.1.1",
         "cross-env": "^6.0.3",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
