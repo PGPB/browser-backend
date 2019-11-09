@@ -7,7 +7,7 @@
         "build": "yarn build-server && yarn build-frontend",
         "watch": "concurrently -k -p \"[{name}]\" -n \"TSC,Node\" -c \"cyan.bold,green.bold\" \"yarn watch-ts\" \"yarn watch-server\"",
         "build-server": "tsc",
-        "build-frontend": "yarn frontend-download && yarn frontend-build && yarn frontend-copy",
+        "build-frontend": "yarn frontend-build && yarn frontend-copy",
         "watch-ts": "tsc --watch",
         "watch-server": "cross-env NODE_ENV=development nodemon dist/server",
         "frontend-download": "git submodule update --remote --merge",
